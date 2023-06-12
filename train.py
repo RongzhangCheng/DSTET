@@ -7,7 +7,7 @@ from engine import trainer
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--device', type=str, default='cpu', help='')
+parser.add_argument('--device', type=str, default='cuda:0', help='')
 parser.add_argument('--data', type=str, default='data/', help='data path')
 parser.add_argument('--num_nodes', type=int, default=207, help='nodes num')
 parser.add_argument('--seq_length', type=int, default=12, help='predict length')
