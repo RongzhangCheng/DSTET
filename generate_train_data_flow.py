@@ -60,10 +60,8 @@ def generate_graph_seq2seq_io_data(
 
 def generate_train_val_test(args):
     seq_length_x, seq_length_y = args.seq_length_x, args.seq_length_y
-    # df = pd.read_hdf(args.traffic_df_filename)
     df = np.load(args.traffic_df_filename)['data']
-    df = df[..., args.target_channel]
-    df = df[..., -1]
+    df = df[:, :, args.target_channel]
     # 0 is the latest observed sample.
     x_offsets = np.sort(np.concatenate((np.arange(-(seq_length_x - 1), 1, 1),)))
     # Predict the next one hour
@@ -108,7 +106,7 @@ if __name__ == "__main__":
 
     TRAIN_RATIO = 0.7
     TEST_RATIO = 0.2
-    TARGET_CHANNEL = [0]
+    TARGET_CHANNEL = 0
     FUTURE_SEQ_LEN = 12
 
     DATASET_NAME = "PEMS03"  # PEMS03 PEMS04 PEMS07 PEMS08
