@@ -21,7 +21,6 @@ parser.add_argument('--epochs', type=int, default=60, help='')
 parser.add_argument('--print_every', type=int, default=1000, help='')
 parser.add_argument('--save', type=str, default='garage/', help='save path')
 parser.add_argument('--expid', type=int, default=1, help='experiment id')
-parser.add_argument('--seed', type=int, default=42, help='random seed')
 
 args = parser.parse_args()
 
