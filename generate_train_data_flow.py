@@ -106,7 +106,7 @@ def generate_train_val_test(args):
 
 if __name__ == "__main__":
 
-    TRAIN_RATIO = 0.6
+    TRAIN_RATIO = 0.7
     TEST_RATIO = 0.2
     TARGET_CHANNEL = [0]
     FUTURE_SEQ_LEN = 12
