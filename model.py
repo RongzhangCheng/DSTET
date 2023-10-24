@@ -9,7 +9,7 @@ class DecoupledSpatialTemporalEmbeddingLayer(nn.Module):
         self.num_nodes = num_nodes
         self.node_dim = edim
         self.input_len = 12
-        self.input_dim = input_dim
+        self.input_dim = 3
         self.embed_dim = edim
         self.temp_dim_tid = edim
         self.temp_dim_diw = edim
